@@ -1,2 +1,5 @@
-FROM httpd:2.4
-COPY ./public_html/ /usr/local/apache2/htdocs/
+FROM php:8.0-apache
+WORKDIR /var/www/html
+
+COPY ./public_html/ /var/www/html/
+EXPOSE 80
